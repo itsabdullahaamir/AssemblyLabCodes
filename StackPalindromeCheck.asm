@@ -24,16 +24,6 @@ main PROC
     call ReadString 
     mov numOfValsRead, eax
 
-    ; Remove newline if present
-    mov ecx, numOfValsRead
-    cmp ecx, 0
-    je skipNewline
-    mov ebx, ecx
-    dec ebx
-    mov al, inputStr[ebx]
-    cmp al, 0Dh
-    jne skipNewline
-    dec numOfValsRead
 
 skipNewline:
 
